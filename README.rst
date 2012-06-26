@@ -1,29 +1,27 @@
-======================
 Custom delete_selected action
-======================
+=====
 
-Default in Django ``delete_selected`` action in ``ModelAdmin`` not allow
-you to add operations before and after deleting objects from database. 
+Django ``delete_selected`` action in ``ModelAdmin`` not allow
+you to add operations before and after deleting objects from
+database by default.
 
 
-----------
 Problem
-----------
+-----
 
 Default ``delete_selected`` action using ``delete`` method of queryset
 so need to use ``pre_delete`` and ``post_delete`` signals.
 
 
-----------
 Solution
-----------
+-----
 
 Disable_ ``delete_selected`` action for all applications and
 models, but for some models this is crazy.
 
 
 Installing
-==========
+------------
 
 The easiest way to install package is with pip!
 
@@ -47,9 +45,9 @@ Or from source::
 
 
 Usage
-==========
+------------
 
-Import ``custom_delete_selected.admin.CustomDeleteSelected`` extend 
+Import ``custom_delete_selected.admin.CustomDeleteSelected`` to extend 
 ModelAdmin class and override ``delete_model`` method. 
 For example::
 
@@ -58,16 +56,22 @@ For example::
     
     
     class MyModelAdmin(CustomDeleteSelected, admin.ModelAdmin):
-    
-    # your code
-    
-    def delete_model(self, request, obj):
-        # pre delete operations
-        super(MyModelAdmin, self).delete_model(request, obj)
-        # post delete operations
+
+        # your code
+
+        def delete_model(self, request, obj):
+            # pre delete operations
+            super(MyModelAdmin, self).delete_model(request, obj)
+            # post delete operations
 
 This code allow extends you deleting one object (when delete from change_form)
 and same objects (when delete from change_list).
 
 
-.. Disable_ https://docs.djangoproject.com/en/1.3/ref/contrib/admin/actions/#django.contrib.admin.AdminSite.disable_action
+Contributing
+------------
+
+Feel free to fork, send pull requests or report bugs and issues on github.
+
+
+.. _Disable: https://docs.djangoproject.com/en/1.3/ref/contrib/admin/actions/#django.contrib.admin.AdminSite.disable_action
