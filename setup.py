@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='django-custom_delete_selected',
-    version='0.0.dev',
+    name='custom_delete_selected',
+    version='0.1',
     license='ISC',
     description='Customization of delete_selected ModelAdmin action for '
         'post and pre operations.',
@@ -15,7 +15,7 @@ setup(
         'django'
     ],
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: ISC License (ISCL)',
