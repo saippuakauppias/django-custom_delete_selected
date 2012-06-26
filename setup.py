@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='custom_delete_selected',
+    name='django-custom_delete_selected',
     version='0.1',
     license='ISC',
     description='Customization of delete_selected ModelAdmin action for '
