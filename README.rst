@@ -1,5 +1,5 @@
 Custom delete_selected action
-=====
+=============================
 
 Django ``delete_selected`` action in ``ModelAdmin`` not allow
 you to add operations before and after deleting objects from
@@ -7,21 +7,21 @@ database by default.
 
 
 Problem
------
+-------
 
 Default ``delete_selected`` action using ``delete`` method of queryset
 so need to use ``pre_delete`` and ``post_delete`` signals.
 
 
 Solution
------
+--------
 
 Disable_ ``delete_selected`` action for all applications and
 models, but for some models this is crazy.
 
 
 Installing
-------------
+----------
 
 The easiest way to install package is with pip!
 
@@ -45,7 +45,7 @@ Or from source::
 
 
 Usage
-------------
+-----
 
 Import ``custom_delete_selected.admin.CustomDeleteSelected`` to extend 
 ModelAdmin class and override ``delete_model`` method. 
