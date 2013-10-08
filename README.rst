@@ -75,3 +75,7 @@ Feel free to fork, send pull requests or report bugs and issues on github.
 
 
 .. _Disable: https://docs.djangoproject.com/en/1.3/ref/contrib/admin/actions/#django.contrib.admin.AdminSite.disable_action
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/saippuakauppias/django-custom_delete_selected/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
